@@ -99,7 +99,6 @@ public class LinkedList {
         if (length == 0) {
             tail = null;
         }
-
         return temp;
     }
 
@@ -122,7 +121,6 @@ public class LinkedList {
             head = null;
             tail = null;
         }
-
         return temp;
     }
 
@@ -135,17 +133,15 @@ public class LinkedList {
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
-
         return temp;
     }
 
     public boolean set(int index, int value) {
         Node temp = get(index);
-        if(temp != null) {
+        if (temp != null) {
             temp.value = value;
             return true;
         }
-
         return false;
     }
 
