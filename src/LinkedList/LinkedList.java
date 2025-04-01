@@ -76,6 +76,17 @@ public class LinkedList {
         length++;
     }
 
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            tail = newNode;
+        } else {
+            newNode.next = head;
+        }
+        head = newNode;
+        length++;
+    }
+
     public Node removeFirst() {
         if (length == 0) {
             return null;
