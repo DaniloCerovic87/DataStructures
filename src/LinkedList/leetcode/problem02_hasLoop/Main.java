@@ -1,7 +1,5 @@
 package LinkedList.leetcode.problem02_hasLoop;
 
-import LinkedList.leetcode.problem02_hasLoop.LinkedList;
-
 public class Main {
 
     public static void main(String[] args) {
