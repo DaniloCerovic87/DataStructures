@@ -231,11 +231,10 @@ public class LinkedList {
         Node temp = head;
         head = tail;
         tail = temp;
-        Node after;
         Node before = null;
 
         for (int i = 0; i < length; i++) {
-            after = temp.next;
+            Node after = temp.next;
             temp.next = before;
             before = temp;
             temp = after;
@@ -246,7 +245,7 @@ public class LinkedList {
         doReverseRecursive(head, null);
     }
 
-    public void doReverseRecursive(Node current, Node prev) {
+    private void doReverseRecursive(Node current, Node prev) {
         if (current == null) {
             head = prev;
             return;
