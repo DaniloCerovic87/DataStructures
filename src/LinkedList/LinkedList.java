@@ -124,16 +124,16 @@ public class LinkedList {
         return temp;
     }
 
-    public int sum() {
-        return sumRecursive(head);
+    public int sumRecursive() {
+        return doSumRecursive(head);
     }
 
-    private int sumRecursive(Node node) {
+    private int doSumRecursive(Node node) {
         if(node == null) {
             return 0;
         }
 
-        return node.value + sumRecursive(node.next);
+        return node.value + doSumRecursive(node.next);
     }
 
     public int sumIterative() {
@@ -146,7 +146,11 @@ public class LinkedList {
         return sum;
     }
 
-    public Node get(int index) {
+    public Node getRecursive(int index) {
+        return doGetRecursive(head, index);
+    }
+
+    public Node getIterative(int index) {
         if (index < 0 || index >= length) {
             return null;
         }
@@ -158,8 +162,20 @@ public class LinkedList {
         return temp;
     }
 
+    private Node doGetRecursive(Node node, int index) {
+        if(node == null) {
+            return null;
+        }
+
+        if(index == 0) {
+            return node;
+        }
+
+        return doGetRecursive(node.next, index - 1);
+    }
+
     public boolean set(int index, int value) {
-        Node temp = get(index);
+        Node temp = getIterative(index);
         if (temp != null) {
             temp.value = value;
             return true;
@@ -183,7 +199,7 @@ public class LinkedList {
         }
 
         Node newNode = new Node(value);
-        Node temp = get(index - 1);
+        Node temp = getIterative(index - 1);
         newNode.next = temp.next;
         temp.next = newNode;
         length++;
@@ -203,7 +219,7 @@ public class LinkedList {
             return removeLast();
         }
 
-        Node pre = get(index - 1);
+        Node pre = getIterative(index - 1);
         Node temp = pre.next;
         pre.next = temp.next;
         temp.next = null;
@@ -211,7 +227,7 @@ public class LinkedList {
         return temp;
     }
 
-    public void reverse() {
+    public void reverseIterative() {
         Node temp = head;
         head = tail;
         tail = temp;
@@ -224,6 +240,20 @@ public class LinkedList {
             before = temp;
             temp = after;
         }
+    }
+
+    public void reverseRecursive() {
+        doReverseRecursive(head, null);
+    }
+
+    public void doReverseRecursive(Node current, Node prev) {
+        if (current == null) {
+            head = prev;
+            return;
+        }
+        Node next = current.next;
+        current.next = prev;
+        doReverseRecursive(next, current);
     }
 
 }
