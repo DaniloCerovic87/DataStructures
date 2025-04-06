@@ -136,6 +136,16 @@ public class LinkedList {
         return node.value + sumRecursive(node.next);
     }
 
+    public int sumIterative() {
+        int sum = 0;
+        Node current = head;
+        while (current != null) {
+            sum += current.value;
+            current = current.next;
+        }
+        return sum;
+    }
+
     public Node get(int index) {
         if (index < 0 || index >= length) {
             return null;
