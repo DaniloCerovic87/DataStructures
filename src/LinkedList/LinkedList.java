@@ -124,6 +124,18 @@ public class LinkedList {
         return temp;
     }
 
+    public int sum() {
+        return sumRecursive(head);
+    }
+
+    private int sumRecursive(Node node) {
+        if(node == null) {
+            return 0;
+        }
+
+        return node.value + sumRecursive(node.next);
+    }
+
     public Node get(int index) {
         if (index < 0 || index >= length) {
             return null;
