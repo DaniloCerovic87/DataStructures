@@ -8,7 +8,7 @@ public class LinkedList {
     private Node head;
     private int length;
 
-    class Node {
+    static class Node {
         int value;
         Node next;
 
