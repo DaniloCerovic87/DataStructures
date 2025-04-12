@@ -92,4 +92,31 @@ public class LinkedList {
         head = dummy.next;
     }
 
+    public void reverseBetween2(int startIndex, int endIndex) {
+        Node current = head;
+        Node prev = null;
+        for (int i = 0; i < startIndex; i++) {
+            prev = current;
+            current = current.next;
+        }
+
+        Node beforeReverseStart = prev;
+        Node reversedTail = current;
+
+        for (int i = startIndex; i <= endIndex; i++) {
+            Node after = current.next;
+            current.next = prev;
+            prev = current;
+            current = after;
+        }
+
+        if (beforeReverseStart != null) {
+            beforeReverseStart.next = prev;
+        } else {
+            head = prev;
+        }
+
+        reversedTail.next = current;
+    }
+
 }
