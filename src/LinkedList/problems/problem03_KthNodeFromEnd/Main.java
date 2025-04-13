@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem03_KthNodeFromEnd;
+package LinkedList.problems.problem03_KthNodeFromEnd;
 
 public class Main {
 

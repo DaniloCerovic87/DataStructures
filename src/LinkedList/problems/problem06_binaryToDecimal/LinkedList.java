@@ -1,9 +1,9 @@
-package LinkedList.leetcode.problem02_hasLoop;
+package LinkedList.problems.problem06_binaryToDecimal;
 
 public class LinkedList {
 
     private Node head;
-    private Node tail;
+    private int length;
 
     static class Node {
         int value;
@@ -17,15 +17,15 @@ public class LinkedList {
     public LinkedList(int value) {
         Node newNode = new Node(value);
         head = newNode;
-        tail = newNode;
+        length = 1;
     }
 
     public Node getHead() {
         return head;
     }
 
-    public Node getTail() {
-        return tail;
+    public int getLength() {
+        return length;
     }
 
     public void printList() {
@@ -37,15 +37,14 @@ public class LinkedList {
     }
 
     public void printAll() {
-        if (head == null) {
+        if (length == 0) {
             System.out.println("Head: null");
-            System.out.println("Tail: null");
         } else {
             System.out.println("Head: " + head.value);
-            System.out.println("Tail: " + tail.value);
         }
+        System.out.println("Length: " + length);
         System.out.println("\nLinked List:");
-        if (head == null) {
+        if (length == 0) {
             System.out.println("empty");
         } else {
             printList();
@@ -54,7 +53,7 @@ public class LinkedList {
 
     public void makeEmpty() {
         head = null;
-        tail = null;
+        length = 0;
     }
 
     public void append(int value) {
@@ -62,23 +61,25 @@ public class LinkedList {
         if (head == null) {
             head = newNode;
         } else {
-            tail.next = newNode;
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
         }
-        tail = newNode;
+        length++;
     }
 
-    public boolean hasLoop() {
-        Node slow = head;
-        Node fast = head;
-
-        while(fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-            if(slow == fast) {
-                return true;
-            }
+    public int binaryToDecimal() {
+        int num = 0;
+        Node current = head;
+        int pow = length - 1;
+        while (current != null) {
+            num += (int) (Math.pow(2, pow) * current.value);
+            current = current.next;
+            pow--;
         }
-        return false;
+        return num;
     }
 
 }

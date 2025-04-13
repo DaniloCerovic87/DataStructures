@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem01_middleNode;
+package LinkedList.problems.problem03_KthNodeFromEnd;
 
 public class LinkedList {
 
@@ -67,15 +67,23 @@ public class LinkedList {
         tail = newNode;
     }
 
-    public Node getMiddleNode() {
-        Node slow = head;
-        Node fast = head;
+    public Node findKthFromEnd(int k) {
+        Node first = head;
+        Node second = head;
 
-        while(fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+        for (int i = 0; i < k; i++) {
+            if (first == null) {
+                return null;
+            }
+            first = first.next;
         }
-        return slow;
+
+        while (first != null) {
+            first = first.next;
+            second = second.next;
+        }
+
+        return second;
     }
 
 }

@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem01_middleNode;
+package LinkedList.problems.problem01_middleNode;
 
 public class Main {
 

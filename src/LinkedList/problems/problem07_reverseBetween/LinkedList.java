@@ -1,11 +1,11 @@
-package LinkedList.leetcode.problem04_partitionList;
+package LinkedList.problems.problem07_reverseBetween;
 
 public class LinkedList {
 
     private Node head;
     private int length;
 
-    static class Node {
+    class Node {
         int value;
         Node next;
 
@@ -70,27 +70,53 @@ public class LinkedList {
         length++;
     }
 
-    public void partitionList(int x) {
-        Node dummy1 = new Node(0);
-        Node dummy2 = new Node(0);
-        Node prev1 = dummy1;
-        Node prev2 = dummy2;
-        Node current = head;
+    public void reverseBetween(int startIndex, int endIndex) {
+        if (head == null) {
+            return;
+        }
+        Node dummy = new Node(0);
+        dummy.next = head;
+        Node prev = dummy;
 
-        while (current != null) {
-            if (current.value < x) {
-                prev1.next = current;
-                prev1 = prev1.next;
-            } else {
-                prev2.next = current;
-                prev2 = prev2.next;
-            }
+        for (int i = 0; i < startIndex; i++) {
+            prev = prev.next;
+        }
+        Node current = prev.next;
+
+        for (int i = 0; i < endIndex - startIndex; i++) {
+            Node toMove = current.next;
+            current.next = toMove.next;
+            toMove.next = prev.next;
+            prev.next = toMove;
+        }
+        head = dummy.next;
+    }
+
+    public void reverseBetween2(int startIndex, int endIndex) {
+        Node current = head;
+        Node prev = null;
+        for (int i = 0; i < startIndex; i++) {
+            prev = current;
             current = current.next;
         }
 
-        prev2.next = null;
-        prev1.next = dummy2.next;
-        head = dummy1.next;
+        Node beforeReverseStart = prev;
+        Node reversedTail = current;
+
+        for (int i = startIndex; i <= endIndex; i++) {
+            Node after = current.next;
+            current.next = prev;
+            prev = current;
+            current = after;
+        }
+
+        if (beforeReverseStart != null) {
+            beforeReverseStart.next = prev;
+        } else {
+            head = prev;
+        }
+
+        reversedTail.next = current;
     }
 
 }

@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem08_zipperList;
+package LinkedList.problems.problem08_zipperList;
 
 public class LinkedList {
 

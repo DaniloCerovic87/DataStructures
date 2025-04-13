@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem04_partitionList;
+package LinkedList.problems.problem05_removeDuplicates;
 
 public class Main {
 
@@ -8,8 +8,10 @@ public class Main {
         ll.append(7);
         ll.append(5);
         ll.append(9);
+        ll.append(5);
+        ll.append(7);
 
-        ll.partitionList(7);
+        ll.removeDuplicates();
         ll.printAll();
     }
 }

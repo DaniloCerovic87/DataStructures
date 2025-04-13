@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem09_removeNodes;
+package LinkedList.problems.problem09_removeNodes;
 
 public class LinkedList {
 

@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem06_binaryToDecimal;
+package LinkedList.problems.problem06_binaryToDecimal;
 
 public class Main {
 

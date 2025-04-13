@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem05_removeDuplicates;
+package LinkedList.problems.problem05_removeDuplicates;
 
 import java.util.HashSet;
 import java.util.Set;

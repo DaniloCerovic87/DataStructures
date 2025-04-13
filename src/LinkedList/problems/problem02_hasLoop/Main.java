@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem02_hasLoop;
+package LinkedList.problems.problem02_hasLoop;
 
 public class Main {
 

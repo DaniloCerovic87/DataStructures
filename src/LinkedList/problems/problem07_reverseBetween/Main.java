@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem05_removeDuplicates;
+package LinkedList.problems.problem07_reverseBetween;
 
 public class Main {
 
@@ -11,7 +11,8 @@ public class Main {
         ll.append(5);
         ll.append(7);
 
-        ll.removeDuplicates();
+        ll.reverseBetween(2, 5);
+
         ll.printAll();
     }
 }

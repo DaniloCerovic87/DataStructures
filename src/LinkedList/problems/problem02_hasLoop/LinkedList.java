@@ -1,9 +1,9 @@
-package LinkedList.leetcode.problem06_binaryToDecimal;
+package LinkedList.problems.problem02_hasLoop;
 
 public class LinkedList {
 
     private Node head;
-    private int length;
+    private Node tail;
 
     static class Node {
         int value;
@@ -17,15 +17,15 @@ public class LinkedList {
     public LinkedList(int value) {
         Node newNode = new Node(value);
         head = newNode;
-        length = 1;
+        tail = newNode;
     }
 
     public Node getHead() {
         return head;
     }
 
-    public int getLength() {
-        return length;
+    public Node getTail() {
+        return tail;
     }
 
     public void printList() {
@@ -37,14 +37,15 @@ public class LinkedList {
     }
 
     public void printAll() {
-        if (length == 0) {
+        if (head == null) {
             System.out.println("Head: null");
+            System.out.println("Tail: null");
         } else {
             System.out.println("Head: " + head.value);
+            System.out.println("Tail: " + tail.value);
         }
-        System.out.println("Length: " + length);
         System.out.println("\nLinked List:");
-        if (length == 0) {
+        if (head == null) {
             System.out.println("empty");
         } else {
             printList();
@@ -53,7 +54,7 @@ public class LinkedList {
 
     public void makeEmpty() {
         head = null;
-        length = 0;
+        tail = null;
     }
 
     public void append(int value) {
@@ -61,25 +62,23 @@ public class LinkedList {
         if (head == null) {
             head = newNode;
         } else {
-            Node current = head;
-            while (current.next != null) {
-                current = current.next;
-            }
-            current.next = newNode;
+            tail.next = newNode;
         }
-        length++;
+        tail = newNode;
     }
 
-    public int binaryToDecimal() {
-        int num = 0;
-        Node current = head;
-        int pow = length - 1;
-        while (current != null) {
-            num += (int) (Math.pow(2, pow) * current.value);
-            current = current.next;
-            pow--;
+    public boolean hasLoop() {
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast) {
+                return true;
+            }
         }
-        return num;
+        return false;
     }
 
 }

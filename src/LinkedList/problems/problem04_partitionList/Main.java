@@ -1,4 +1,4 @@
-package LinkedList.leetcode.problem07_reverseBetween;
+package LinkedList.problems.problem04_partitionList;
 
 public class Main {
 
@@ -8,11 +8,8 @@ public class Main {
         ll.append(7);
         ll.append(5);
         ll.append(9);
-        ll.append(5);
-        ll.append(7);
 
-        ll.reverseBetween(2, 5);
-
+        ll.partitionList(7);
         ll.printAll();
     }
 }
