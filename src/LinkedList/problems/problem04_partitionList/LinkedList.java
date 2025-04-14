@@ -93,4 +93,39 @@ public class LinkedList {
         head = dummy1.next;
     }
 
+    public void partitionListInline(int x) {
+        Node dummy = new Node(0);
+        dummy.next = head;
+        Node firstGreaterOrEqualsPrev = dummy;
+        Node firstGreaterOrEquals = head;
+
+        while(firstGreaterOrEquals != null && firstGreaterOrEquals .value < x) {
+            firstGreaterOrEqualsPrev = firstGreaterOrEquals;
+            firstGreaterOrEquals  = firstGreaterOrEquals .next;
+        }
+
+        if(firstGreaterOrEquals  == null) {
+            return;
+        }
+
+        Node current = firstGreaterOrEquals;
+        Node pre = firstGreaterOrEqualsPrev;
+
+        while(current != null) {
+            Node next = current.next;
+            if(current.value < x) {
+                pre.next = current.next;
+                firstGreaterOrEqualsPrev.next = current;
+                current.next = firstGreaterOrEquals;
+                firstGreaterOrEqualsPrev = current;
+            } else {
+                pre = current;
+            }
+
+            current = next;
+        }
+
+        head = dummy.next;
+    }
+
 }
