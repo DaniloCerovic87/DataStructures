@@ -11,12 +11,17 @@ public class Main {
         System.out.println("Head " + ll.getHead().value);
         System.out.println("Tail " + ll.getTail().value);
         System.out.println("Length " + ll.getLength());
-
         ll.printList();
 
         System.out.println("Removed node: " + ll.removeLast().value);
+        System.out.println("Removed node: " + ll.removeLast().value);
+        System.out.println("Removed node: " + ll.removeLast().value);
 
+        System.out.println("Head " + ll.getHead());
+        System.out.println("Tail " + ll.getTail());
+        System.out.println("Length " + ll.getLength());
         ll.printList();
+
     }
 
 }
