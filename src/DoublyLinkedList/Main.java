@@ -14,7 +14,9 @@ public class Main {
 
         ll.printList();
 
+        System.out.println("Removed node: " + ll.removeLast().value);
 
+        ll.printList();
     }
 
 }
