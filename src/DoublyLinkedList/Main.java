@@ -8,6 +8,10 @@ public class Main {
         ll.append(8);
         ll.append(9);
 
+        System.out.println("Node on index 0: " + ll.get(0).value);
+        System.out.println("Node on index 1: " + ll.get(1).value);
+        System.out.println("Node on index 2: " + ll.get(2).value);
+
         System.out.println("Head " + ll.getHead().value);
         System.out.println("Tail " + ll.getTail().value);
         System.out.println("Length " + ll.getLength());
