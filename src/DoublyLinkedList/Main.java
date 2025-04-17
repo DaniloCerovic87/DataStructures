@@ -31,7 +31,7 @@ public class Main {
         System.out.println("Length " + ll.getLength());
         ll.printList();
 
-        ll.removeFirst();
+        System.out.println("Removed node: " + ll.removeFirst().value);
 
         System.out.println("Head " + ll.getHead().value);
         System.out.println("Tail " + ll.getTail().value);
