@@ -41,6 +41,19 @@ public class Main {
         System.out.println("Tail " + ll.getTail().value);
         System.out.println("Length " + ll.getLength());
         ll.printList();
+
+        ll.prepend(1);
+        ll.prepend(0);
+
+        ll.set(0, 7);
+        ll.set(1, 8);
+        ll.set(2, 9);
+        ll.set(3, 10);
+
+        System.out.println("Head " + ll.getHead().value);
+        System.out.println("Tail " + ll.getTail().value);
+        System.out.println("Length " + ll.getLength());
+        ll.printList();
     }
 
 }
