@@ -22,6 +22,14 @@ public class Main {
         System.out.println("Length " + ll.getLength());
         ll.printList();
 
+        ll.prepend(3);
+        ll.prepend(2);
+        ll.prepend(1);
+
+        System.out.println("Head " + ll.getHead().value);
+        System.out.println("Tail " + ll.getTail().value);
+        System.out.println("Length " + ll.getLength());
+        ll.printList();
     }
 
 }
