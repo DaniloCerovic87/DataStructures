@@ -63,6 +63,15 @@ public class Main {
         System.out.println("Tail " + ll.getTail().value);
         System.out.println("Length " + ll.getLength());
         ll.printList();
+
+        System.out.println("Removed node: " + ll.remove(0).value);
+        System.out.println("Removed node: " + ll.remove(3).value);
+        System.out.println("Removed node: " + ll.remove(4).value);
+
+        System.out.println("Head " + ll.getHead().value);
+        System.out.println("Tail " + ll.getTail().value);
+        System.out.println("Length " + ll.getLength());
+        ll.printList();
     }
 
 }
