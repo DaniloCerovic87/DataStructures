@@ -23,6 +23,23 @@ public class DoublyLinkedList {
         length = 1;
     }
 
+    public void printAll() {
+        if(length == 0) {
+            System.out.println("Head: null");
+            System.out.println("Head: null");
+        } else {
+            System.out.println("Head: " + head.value);
+            System.out.println("Tail: " + tail.value);
+        }
+        System.out.println("Length: " + length);
+        System.out.println("\nDoubly Linked List:");
+        if(length == 0) {
+            System.out.println("empty");
+        } else {
+            printList();
+        }
+    }
+
     public void printList() {
         Node temp = head;
         while (temp != null) {
