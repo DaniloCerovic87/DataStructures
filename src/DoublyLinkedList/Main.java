@@ -54,6 +54,15 @@ public class Main {
         System.out.println("Tail " + ll.getTail().value);
         System.out.println("Length " + ll.getLength());
         ll.printList();
+
+        ll.insert(0, 6);
+        ll.insert(5, 12);
+        ll.insert(5, 11);
+
+        System.out.println("Head " + ll.getHead().value);
+        System.out.println("Tail " + ll.getTail().value);
+        System.out.println("Length " + ll.getLength());
+        ll.printList();
     }
 
 }
