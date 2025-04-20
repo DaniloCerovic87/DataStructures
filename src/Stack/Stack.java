@@ -50,7 +50,7 @@ public class Stack {
             return null;
         }
         Node temp = top;
-        top = temp.next;
+        top = top.next;
         temp.next = null;
         height--;
         return temp;
