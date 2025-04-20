@@ -22,7 +22,7 @@ public class Stack {
 
     public void printStack() {
         Node temp = top;
-        while(temp != null) {
+        while (temp != null) {
             System.out.println(temp.value);
             temp = temp.next;
         }
