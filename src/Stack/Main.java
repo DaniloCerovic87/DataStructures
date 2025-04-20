@@ -15,6 +15,11 @@ public class Main {
         System.out.println("Top: " + myStack.getTop().value);
         System.out.println("Height: " +myStack.getHeight());
         myStack.printStack();
+
+        System.out.println("Removed node: " + myStack.pop().value);
+        System.out.println("Removed node: " + myStack.pop().value);
+        System.out.println("Removed node: " + myStack.pop().value);
+        myStack.printStack();
     }
 
 }
