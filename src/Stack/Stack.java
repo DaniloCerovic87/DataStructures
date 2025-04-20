@@ -35,4 +35,13 @@ public class Stack {
     public int getHeight() {
         return height;
     }
+
+    public void push(int value) {
+        Node newNode = new Node(value);
+        if (height != 0) {
+            newNode.next = top;
+        }
+        top = newNode;
+        height++;
+    }
 }
