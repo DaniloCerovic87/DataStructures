@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Stack<T> {
 
-    private List<T> stackList = new ArrayList<>();
+    private final List<T> stackList = new ArrayList<>();
 
     public List<T> getStackList() {
         return stackList;
@@ -22,7 +22,7 @@ public class Stack<T> {
     }
 
     public T peek() {
-        if (stackList.isEmpty()) {
+        if (isEmpty()) {
             return null;
         } else {
             return stackList.get(stackList.size() - 1);

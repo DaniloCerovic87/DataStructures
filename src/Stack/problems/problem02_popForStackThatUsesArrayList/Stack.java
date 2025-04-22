@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Stack<T> {
 
-    private List<T> stackList = new ArrayList<>();
+    private final List<T> stackList = new ArrayList<>();
 
     public List<T> getStackList() {
         return stackList;
