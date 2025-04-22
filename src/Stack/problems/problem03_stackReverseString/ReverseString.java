@@ -10,7 +10,7 @@ public class ReverseString {
         System.out.println(reverseString("danilo"));
     }
 
-    public static String reverseString(String string) {
+    private static String reverseString(String string) {
         if (string == null || string.isEmpty()) {
             return "";
         }

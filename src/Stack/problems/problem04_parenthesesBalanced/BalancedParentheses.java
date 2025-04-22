@@ -10,7 +10,7 @@ public class BalancedParentheses {
         System.out.println(isBalancedParentheses("((()())"));
     }
 
-    public static boolean isBalancedParentheses(String parentheses) {
+    private static boolean isBalancedParentheses(String parentheses) {
         Stack<Character> stack = new Stack<>();
         for (char c : parentheses.toCharArray()) {
             if (c == '(') {
