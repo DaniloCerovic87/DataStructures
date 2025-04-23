@@ -12,8 +12,8 @@ public class Stack<T> {
     }
 
     public void printStack() {
-        for (T element : stackList) {
-            System.out.println(element);
+        for (int i = size() - 1; i >= 0; i--) {
+            System.out.println(stackList.get(i));
         }
     }
 
