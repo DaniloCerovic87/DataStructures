@@ -17,6 +17,11 @@ public class Main {
         System.out.println("Length: " + queue.getLength());
 
         queue.printQueue();
+
+        System.out.println(queue.dequeue().value);
+        System.out.println(queue.dequeue().value);
+        System.out.println(queue.dequeue().value);
+        System.out.println("Length: " + queue.getLength());
     }
 
 }
