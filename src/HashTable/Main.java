@@ -20,5 +20,7 @@ public class Main {
         System.out.println(myHashTable.get("nails"));
         System.out.println(myHashTable.get("screws"));
         System.out.println(myHashTable.get("houses"));
+
+        System.out.println("All keys: " + myHashTable.keys());
     }
 }
