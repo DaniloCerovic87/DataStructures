@@ -15,5 +15,10 @@ public class Main {
         myHashTable.put("nails", 190);
 
         myHashTable.printTable();
+
+        System.out.println("Getting values");
+        System.out.println(myHashTable.get("nails"));
+        System.out.println(myHashTable.get("screws"));
+        System.out.println(myHashTable.get("houses"));
     }
 }
