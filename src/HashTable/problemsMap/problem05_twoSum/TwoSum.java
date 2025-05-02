@@ -13,7 +13,7 @@ public class TwoSum {
         System.out.println(Arrays.toString(twoSum(new int[]{}, 0)));
     }
 
-    public static int[] twoSum(int[] array, int target) {
+    private static int[] twoSum(int[] array, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         int[] result = new int[2];
 
