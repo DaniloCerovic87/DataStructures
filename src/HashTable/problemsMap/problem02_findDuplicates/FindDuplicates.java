@@ -1,4 +1,4 @@
-package HashTable.problems.problem02_findDuplicates;
+package HashTable.problemsMap.problem02_findDuplicates;
 
 import java.util.ArrayList;
 import java.util.HashMap;

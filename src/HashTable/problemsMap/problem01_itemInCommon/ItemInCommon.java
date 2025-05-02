@@ -1,4 +1,4 @@
-package HashTable.problems.problem01_itemInCommon;
+package HashTable.problemsMap.problem01_itemInCommon;
 
 import java.util.HashMap;
 import java.util.Map;
