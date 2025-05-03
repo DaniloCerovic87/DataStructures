@@ -9,6 +9,7 @@ public class SubarraySum {
         System.out.println(Arrays.toString(subarraySumSlidingWindow(new int[]{1, 2, 3, 4, 5}, 20)));
     }
 
+    // works with positive numbers only
     private static int[] subarraySumSlidingWindow(int[] nums, int target) {
         int start = 0;
         int sum = 0;
