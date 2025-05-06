@@ -7,7 +7,7 @@ public class Main {
         System.out.println(graph.addVertex("A"));
         System.out.println(graph.addVertex("B"));
         graph.printGraph();
-        graph.addEdge("A", "B");
+        System.out.println(graph.addEdge("A", "B"));
         graph.printGraph();
     }
 
