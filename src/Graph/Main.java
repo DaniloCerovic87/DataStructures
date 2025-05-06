@@ -13,6 +13,10 @@ public class Main {
         System.out.println(graph.removeEdge("A", "C"));
         System.out.println(graph.removeEdge("A", "B"));
         graph.printGraph();
+        System.out.println(graph.removeVertex("A"));
+        graph.printGraph();
+        System.out.println(graph.removeVertex("B"));
+        graph.printGraph();
     }
 
 }
