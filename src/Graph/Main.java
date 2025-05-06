@@ -8,6 +8,10 @@ public class Main {
         System.out.println(graph.addVertex("B"));
         graph.printGraph();
         System.out.println(graph.addEdge("A", "B"));
+        System.out.println(graph.addEdge("A", "C"));
+        graph.printGraph();
+        System.out.println(graph.removeEdge("A", "C"));
+        System.out.println(graph.removeEdge("A", "B"));
         graph.printGraph();
     }
 
