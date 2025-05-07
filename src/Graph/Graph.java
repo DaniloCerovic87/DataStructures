@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Graph {
 
-    private HashMap<String, List<String>> adjList = new HashMap<>();
+    private final HashMap<String, List<String>> adjList = new HashMap<>();
 
     public HashMap<String, List<String>> getAdjList() {
         return adjList;
