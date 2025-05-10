@@ -18,6 +18,14 @@ public class Main {
         myHeap.insert(75);
 
         System.out.println(myHeap.getHeap());
+
+        myHeap.remove();
+
+        System.out.println(myHeap.getHeap());
+
+        myHeap.remove();
+
+        System.out.println(myHeap.getHeap());
     }
 
 }

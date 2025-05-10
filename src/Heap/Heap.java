@@ -25,17 +25,17 @@ public class Heap {
     }
 
     public Integer remove() {
-        if(heap.isEmpty()) {
+        if (heap.isEmpty()) {
             return null;
         }
 
-        if(heap.size() == 1) {
+        if (heap.size() == 1) {
             return heap.remove(0);
         }
 
         int maxValue = heap.get(0);
         heap.set(0, heap.remove(heap.size() - 1));
-        // sinkDown(0); to be implemented
+        sinkDown(0);
 
         return maxValue;
     }
@@ -56,6 +56,29 @@ public class Heap {
         int temp = heap.get(index1);
         heap.set(index1, heap.get(index2));
         heap.set(index2, temp);
+    }
+
+    private void sinkDown(int index) {
+        int maxIndex = index;
+        while (true) {
+            int leftIndex = leftChild(index);
+            int rightIndex = rightChild(index);
+
+            if (leftIndex < heap.size() && heap.get(leftIndex) > heap.get(maxIndex)) {
+                maxIndex = leftIndex;
+            }
+
+            if (rightIndex < heap.size() && heap.get(rightIndex) > heap.get(maxIndex)) {
+                maxIndex = rightIndex;
+            }
+
+            if (maxIndex != index) {
+                swap(index, maxIndex);
+                index = maxIndex;
+            } else {
+                return;
+            }
+        }
     }
 
 }
