@@ -24,6 +24,21 @@ public class Heap {
         }
     }
 
+    public Integer remove() {
+        if(heap.isEmpty()) {
+            return null;
+        }
+
+        if(heap.size() == 1) {
+            return heap.remove(0);
+        }
+
+        int maxValue = heap.get(0);
+        heap.set(0, heap.remove(heap.size() - 1));
+        // sinkDown(0); to be implemented
+
+        return maxValue;
+    }
 
     private int leftChild(int index) {
         return 2 * index + 1;
