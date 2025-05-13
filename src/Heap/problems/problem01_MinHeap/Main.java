@@ -9,6 +9,7 @@ public class Main {
         minHeap.insert(5);
         minHeap.insert(2);
 
+        minHeap.remove();
         System.out.println(minHeap.getHeap());
     }
 
