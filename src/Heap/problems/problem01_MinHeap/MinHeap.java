@@ -42,6 +42,22 @@ public class MinHeap {
         }
     }
 
+    public Integer remove() {
+        if (heap.isEmpty()) {
+            return null;
+        }
+
+        if (heap.size() == 1) {
+            return heap.remove(0);
+        }
+
+        int minValue = heap.get(0);
+        heap.set(0, heap.remove(heap.size() - 1));
+        sinkDown(0);
+
+        return minValue;
+    }
+
     private void sinkDown(int index) {
         int minIndex = index;
         while (true) {
