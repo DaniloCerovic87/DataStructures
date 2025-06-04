@@ -19,6 +19,11 @@ public class Main {
         System.out.println("Contains 2: " + myBST.contains(2));
         System.out.println("Contains 3: " + myBST.contains(3));
         System.out.println("Contains 4: " + myBST.contains(4));
+
+        System.out.println("Recursive contains 1: " + myBST.rContains(1));
+        System.out.println("Recursive contains 2: " + myBST.rContains(2));
+        System.out.println("Recursive contains 3: " + myBST.rContains(3));
+        System.out.println("Recursive contains 4: " + myBST.rContains(4));
     }
 
 }
