@@ -50,6 +50,7 @@ public class BinarySearchTree {
     public void rInsert(int value) {
         if (root == null) {
             root = new Node(value);
+            return;
         }
         rInsert(root, value);
     }
@@ -61,7 +62,7 @@ public class BinarySearchTree {
 
         if (value < currentNode.value) {
             currentNode.left = rInsert(currentNode.left, value);
-        } else {
+        } else if (value > currentNode.value) {
             currentNode.right = rInsert(currentNode.right, value);
         }
 
