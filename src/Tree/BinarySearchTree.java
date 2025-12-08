@@ -105,6 +105,40 @@ public class BinarySearchTree {
         return rContains(currentNode.right, value);
     }
 
+    public void rDelete(int value) {
+        root = rDelete(root, value);
+    }
+
+    private Node rDelete(Node currentNode, int value) {
+        if (currentNode == null) {
+            return null;
+        }
+
+        if (value < currentNode.value) {
+            currentNode.left = rDelete(currentNode.left, value);
+        } else if (value > currentNode.value) {
+            currentNode.right = rDelete(currentNode.right, value);
+        } else {
+            if (currentNode.left == null && currentNode.right == null) {
+                return null;
+            }
+
+            if (currentNode.left == null) {
+                return currentNode.right;
+            }
+
+            if (currentNode.right == null) {
+                return currentNode.left;
+            }
+
+            int minValue = getMinValue(currentNode.right);
+            currentNode.value = minValue;
+            currentNode.right = rDelete(currentNode.right, minValue);
+        }
+        return currentNode;
+    }
+
+
     private int getMinValue(Node currentNode) {
         while (currentNode.left != null) {
             currentNode = currentNode.left;

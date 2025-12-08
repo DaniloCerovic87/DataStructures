@@ -6,14 +6,16 @@ public class Main {
         BinarySearchTree myBST = new BinarySearchTree();
         System.out.println("Root " + myBST.getRoot());
 
-        System.out.println("Added 2: " + myBST.insert(2));
-        System.out.println("Added 1: " + myBST.insert(1));
-        System.out.println("Added 3: " + myBST.insert(3));
-        /* or recursive
+//        System.out.println("Added 2: " + myBST.insert(2));
+//        System.out.println("Added 1: " + myBST.insert(1));
+//        System.out.println("Added 3: " + myBST.insert(3));
+
         myBST.rInsert(2);
         myBST.rInsert(1);
         myBST.rInsert(3);
-         */
+        myBST.rInsert(4);
+        myBST.rDelete(4);
+
         System.out.println("Try to add 3 again: " + myBST.insert(3));
 
         System.out.println("Root: " + myBST.getRoot().value);
