@@ -105,4 +105,11 @@ public class BinarySearchTree {
         return rContains(currentNode.right, value);
     }
 
+    private int getMinValue(Node currentNode) {
+        while (currentNode.left != null) {
+            currentNode = currentNode.left;
+        }
+        return currentNode.value;
+    }
+
 }
