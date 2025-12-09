@@ -42,7 +42,10 @@ public class Main {
         myBST2.insert(52);
         myBST2.insert(82);
 
-        System.out.println(myBST2.DFSPreOrder());
+//        System.out.println(myBST2.BFS());
+//        System.out.println(myBST2.DFSPreOrder());
+//        System.out.println(myBST2.DFSPostOrder());
+        System.out.println(myBST2.DFSInOrder());
     }
 
 }
