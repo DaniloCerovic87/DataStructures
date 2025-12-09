@@ -31,6 +31,18 @@ public class Main {
         System.out.println("Recursive contains 2: " + myBST.rContains(2));
         System.out.println("Recursive contains 3: " + myBST.rContains(3));
         System.out.println("Recursive contains 4: " + myBST.rContains(4));
+
+        BinarySearchTree myBST2 = new BinarySearchTree();
+
+        myBST2.insert(47);
+        myBST2.insert(21);
+        myBST2.insert(76);
+        myBST2.insert(18);
+        myBST2.insert(27);
+        myBST2.insert(52);
+        myBST2.insert(82);
+
+        System.out.println(myBST2.BFS());
     }
 
 }
